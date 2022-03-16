@@ -1,13 +1,20 @@
 package sk.stuba.fei.uim.oop;
 
+import sk.stuba.fei.uim.oop.utility.kontakty.Kontakt;
+
 public class Main {
     public static void main(String[] args) {
+        var tomas = new Kontakt("Tomas", "Kovacik");
+        var jakub = new Kontakt("JAKUB", "Kovar");
+        var dominik = new Kontakt("Dominik Pruzinsky");
 
-        TesT test = new TesT();
-        test.tri=4;
+        var prednasajuci = new Kontakt("Gabriel", "Juhas");
 
-        do {
+        prednasajuci.pridajZnamych(new Kontakt[] {new Kontakt(tomas), new Kontakt(jakub), new Kontakt(dominik)});
 
-        }while (test.tri ==3);
+        prednasajuci.vypisZnamych();
+
+        tomas.setMeno("Tomaskoo");
+        prednasajuci.vypisZnamych();
     }
 }
